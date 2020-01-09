@@ -1,0 +1,38 @@
+<div>
+    <form>
+        <div class="form-group">
+            <label>Ime</label>
+            <input class="form-control" ng-model="zadatak.ime" />
+        </div>
+
+        <div>
+            <label>Zaduzeni</label>
+            <input class="form-control" ng-model="zadatak.zaduzeni" />
+        </div>
+
+        <div class="form-group">
+            <label>Bodovi</label>
+            <input class="form-control" ng-model="zadatak.bodovi" />
+        </div>
+
+        <div>
+            <label>Stanje</label>
+            <select class="form-control" ng-model="zadatak.idStanja">
+                <option ng-repeat="s in stanja" value="{{s.id}}" ng-selected="s.id == zadatak.idStanja">{{s.ime}}
+                </option>
+            </select>
+        </div>
+
+        <div>
+            <label>Sprint</label>
+            <select class="form-control" ng-model="zadatak.idSprinta">
+                <option ng-repeat="sp in sprintevi" value="{{sp.id}}" ng-selected="sp.id == zadatak.idSprinta">{{sp.ime}}
+                </option>
+            </select>
+        </div>
+        <br>
+        <button class="btn btn-secondary" ng-click="doEdit()">Dodaj</button>
+    </form>
+
+
+</div>
